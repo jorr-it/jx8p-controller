@@ -12,3 +12,7 @@ Behringer BCR2000 as a MIDI controller for your Roland JX-8P.
 6. Print, cut and place the layout as you like
 
 Enjoy!
+
+## Novation (Zero) SL Mk II
+
+Secondly this repo contains two .syx preset files to control the JX-8P with a Novation (Zero) SL Mk II. I tried both, but prefer the BCR2000 because no menu diving is needed.
