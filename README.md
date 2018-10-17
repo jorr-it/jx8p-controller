@@ -15,4 +15,4 @@ Enjoy!
 
 ## Novation SL Mk II
 
-Secondly this repo contains two .syx preset files to control the JX-8P with a Novation (Zero) SL Mk II. I tried both, but prefer the BCR2000 because no menu diving is needed.
+Secondly this repo contains two .syx preset files to control the JX-8P with a Novation (Zero) SL Mk II. I tried both devices, but prefer the BCR2000 because no menu diving is needed.
