@@ -1,6 +1,6 @@
 # JX8P controllers
 
-Behringer BCR2000 or Novation SL Mk II as a MIDI controller for your Roland JX-8P.
+Behringer BCR2000 or Novation SL Mk II as a MIDI controller for your Roland JX-8P synthesizer.
 
 ## BCR2000 - How to
 
