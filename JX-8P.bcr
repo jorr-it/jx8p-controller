@@ -1,0 +1,353 @@
+﻿; =======================================
+; Roland JX-8P SysEx Controller 
+; written by Jorrit Steetskamp
+; version date: March 5, 2018
+; =======================================
+$rev R1 ; Firmware 1.10; BC Manager 4.0.0
+$global ; Just the defaults
+$preset
+  .name 'JX-8P'
+  .snapshot on
+  .request on
+  .egroups 1
+  .fkeys on
+  .lock off
+  .init
+; 1-8 = Push Encoders (Group 1)
+$encoder 1
+  .showvalue on
+  .mode 1dot
+  .resolution 127
+  .default 0
+  .minmax 0 127
+  .tx $F0 $41 $36 $00 $21 $20 $01 14 val $F7
+$encoder 2
+  .showvalue on
+  .mode 1dot
+  .resolution 127
+  .default 0
+  .minmax 0 127
+  .tx $F0 $41 $36 $00 $21 $20 $01 15 val $F7
+$encoder 3
+  .showvalue on
+  .mode 1dot
+  .resolution 127
+  .default 0
+  .minmax 0 127
+  .tx $F0 $41 $36 $00 $21 $20 $01 21 val $F7
+$encoder 4
+  .showvalue on
+  .mode 1dot
+  .resolution 127
+  .default 0
+  .minmax 0 127
+  .tx $F0 $41 $36 $00 $21 $20 $01 22 val $F7
+$encoder 6
+  .showvalue on
+  .mode 1dot
+  .resolution 127
+  .default 0
+  .minmax 0 127
+  .tx $F0 $41 $36 $00 $21 $20 $01 30 val $F7
+$encoder 7
+  .showvalue on
+  .mode 1dot
+  .resolution 127
+  .default 0
+  .minmax 0 127
+  .tx $F0 $41 $36 $00 $21 $20 $01 36 val $F7
+$encoder 8
+  .showvalue on
+  .mode 1dot
+  .resolution 127
+  .default 0
+  .minmax 0 127
+  .tx $F0 $41 $36 $00 $21 $20 $01 37 val $F7
+; 33-40 = Encoders (Top Row)
+$encoder 33
+  .showvalue on
+  .mode 1dot
+  .resolution 127
+  .default 63
+  .minmax 0 127
+  .tx $F0 $41 $36 $00 $21 $20 $01 13 val $F7
+$encoder 35
+  .showvalue on
+  .mode 1dot
+  .resolution 127
+  .default 63
+  .minmax 0 127
+  .tx $F0 $41 $36 $00 $21 $20 $01 19 val $F7
+$encoder 36
+  .showvalue on
+  .mode 1dot
+  .resolution 127
+  .default 63
+  .minmax 0 127
+  .tx $F0 $41 $36 $00 $21 $20 $01 20 val $F7
+$encoder 37
+  .showvalue on
+  .mode 1dot
+  .resolution 127
+  .default 127
+  .minmax 0 127
+  .tx $F0 $41 $36 $00 $21 $20 $01 28 val $F7
+$encoder 38
+  .showvalue on
+  .mode 1dot
+  .resolution 127
+  .default 0
+  .minmax 0 127
+  .tx $F0 $41 $36 $00 $21 $20 $01 29 val $F7
+$encoder 39
+  .showvalue on
+  .mode 1dot
+  .resolution 127
+  .default 127
+  .minmax 0 127
+  .tx $F0 $41 $36 $00 $21 $20 $01 34 val $F7
+$encoder 40
+  .showvalue on
+  .mode 1dot
+  .resolution 127
+  .default 0
+  .minmax 0 127
+  .tx $F0 $41 $36 $00 $21 $20 $01 35 val $F7
+; 41-48 = Encoders (Middle Row)
+$encoder 41
+  .showvalue on
+  .mode 1dot
+  .resolution 127
+  .default 0
+  .minmax 0 127
+  .tx $F0 $41 $36 $00 $21 $20 $01 45 val $F7
+$encoder 42
+  .showvalue on
+  .mode 1dot
+  .resolution 127
+  .default 0
+  .minmax 0 127
+  .tx $F0 $41 $36 $00 $21 $20 $01 46 val $F7
+$encoder 43
+  .showvalue on
+  .mode 1dot
+  .resolution 600
+  .default 0
+  .minmax 0 127
+  .tx $F0 $41 $36 $00 $21 $20 $01 44 val $F7
+$encoder 46
+  .showvalue on
+  .mode 1dot
+  .resolution 127
+  .default 0
+  .minmax 0 127
+  .tx $F0 $41 $36 $00 $21 $20 $01 41 val $F7
+$encoder 47
+  .showvalue on
+  .mode 1dot
+  .resolution 400
+  .default 0
+  .minmax 0 127
+  .tx $F0 $41 $36 $00 $21 $20 $01 58 val $F7
+$encoder 48
+  .showvalue on
+  .mode 1dot
+  .resolution 400
+  .default 0
+  .minmax 0 127
+  .tx $F0 $41 $36 $00 $21 $20 $01 42 val $F7
+; 49-56 = Encoders (Bottom Row)
+$encoder 49
+  .showvalue on
+  .mode 1dot
+  .resolution 127
+  .default 0
+  .minmax 0 127
+  .tx $F0 $41 $36 $00 $21 $20 $01 47 val $F7
+$encoder 50
+  .showvalue on
+  .mode 1dot
+  .resolution 127
+  .default 0
+  .minmax 0 127
+  .tx $F0 $41 $36 $00 $21 $20 $01 48 val $F7
+$encoder 51
+  .showvalue on
+  .mode 1dot
+  .resolution 127
+  .default 127
+  .minmax 0 127
+  .tx $F0 $41 $36 $00 $21 $20 $01 49 val $F7
+$encoder 52
+  .showvalue on
+  .mode 1dot
+  .resolution 127
+  .default 0
+  .minmax 0 127
+  .tx $F0 $41 $36 $00 $21 $20 $01 50 val $F7
+$encoder 53
+  .showvalue on
+  .mode 1dot
+  .resolution 127
+  .default 0
+  .minmax 0 127
+  .tx $F0 $41 $36 $00 $21 $20 $01 52 val $F7
+$encoder 54
+  .showvalue on
+  .mode 1dot
+  .resolution 127
+  .default 0
+  .minmax 0 127
+  .tx $F0 $41 $36 $00 $21 $20 $01 53 val $F7
+$encoder 55
+  .showvalue on
+  .mode 1dot
+  .resolution 127
+  .default 127
+  .minmax 0 127
+  .tx $F0 $41 $36 $00 $21 $20 $01 54 val $F7
+$encoder 56
+  .showvalue on
+  .mode 1dot
+  .resolution 127
+  .default 0
+  .minmax 0 127
+  .tx $F0 $41 $36 $00 $21 $20 $01 55 val $F7
+; 1-8 = Push Encoders (Group 1)
+$button 1
+  .showvalue on
+  .mode incval 32
+  .default 0
+  .minmax 0 127
+  .tx $F0 $41 $36 $00 $21 $20 $01 26 val $F7
+$button 2
+  .showvalue on
+  .mode incval 32
+  .default 0
+  .minmax 0 127
+  .tx $F0 $41 $36 $00 $21 $20 $01 27 val $F7
+$button 3
+  .showvalue on
+  .mode incval 32
+  .default 0
+  .minmax 0 127
+  .tx $F0 $41 $36 $00 $21 $20 $01 18 val $F7
+$button 5
+  .showvalue on
+  .mode incval 32
+  .default 0
+  .minmax 0 127
+  .tx $F0 $41 $36 $00 $21 $20 $01 31 val $F7
+$button 6
+  .showvalue on
+  .mode incval 32
+  .default 0
+  .minmax 0 127
+  .tx $F0 $41 $36 $00 $21 $20 $01 32 val $F7
+$button 7
+  .showvalue on
+  .mode incval 32
+  .default 0
+  .minmax 0 127
+  .tx $F0 $41 $36 $00 $21 $20 $01 39 val $F7
+$button 8
+  .showvalue on
+  .mode incval 32
+  .default 0
+  .minmax 0 127
+  .tx $F0 $41 $36 $00 $21 $20 $01 40 val $F7
+; 33-40 = Keys (Upper Row)
+$button 33
+  .showvalue on
+  .mode incval 32
+  .default 32
+  .minmax 0 127
+  .tx $F0 $41 $36 $00 $21 $20 $01 11 val $F7
+$button 34
+  .showvalue on
+  .mode incval 32
+  .default 32
+  .minmax 0 127
+  .tx $F0 $41 $36 $00 $21 $20 $01 12 val $F7
+$button 35
+  .showvalue on
+  .mode incval 32
+  .default 32
+  .minmax 0 127
+  .tx $F0 $41 $36 $00 $21 $20 $01 16 val $F7
+$button 36
+  .showvalue on
+  .mode incval 32
+  .default 32
+  .minmax 0 127
+  .tx $F0 $41 $36 $00 $21 $20 $01 17 val $F7
+$button 39
+  .showvalue on
+  .mode incval 32
+  .default 0
+  .minmax 0 127
+  .tx $F0 $41 $36 $00 $21 $20 $01 33 val $F7
+$button 40
+  .showvalue on
+  .mode incval 32
+  .default 0
+  .minmax 0 127
+  .tx $F0 $41 $36 $00 $21 $20 $01 38 val $F7
+; 41-48 = Keys (Lower Row)
+$button 41
+  .showvalue on
+  .mode incval -32
+  .default 32
+  .minmax 0 127
+  .tx $F0 $41 $36 $00 $21 $20 $01 11 val $F7
+$button 42
+  .showvalue on
+  .mode incval -32
+  .default 32
+  .minmax 0 127
+  .tx $F0 $41 $36 $00 $21 $20 $01 12 val $F7
+$button 43
+  .showvalue on
+  .mode incval -32
+  .default 32
+  .minmax 0 127
+  .tx $F0 $41 $36 $00 $21 $20 $01 16 val $F7
+$button 44
+  .showvalue on
+  .mode incval -32
+  .default 32
+  .minmax 0 127
+  .tx $F0 $41 $36 $00 $21 $20 $01 17 val $F7
+$button 47
+  .showvalue on
+  .mode incval -32
+  .default 0
+  .minmax 0 127
+  .tx $F0 $41 $36 $00 $21 $20 $01 33 val $F7
+$button 48
+  .showvalue on
+  .mode incval -32
+  .default 0
+  .minmax 0 127
+  .tx $F0 $41 $36 $00 $21 $20 $01 38 val $F7
+; 49-52  = User Keys (at bottom right of BC)
+$button 49
+  .showvalue on
+  .mode incval 42
+  .default 0
+  .minmax 0 127
+  .tx $F0 $41 $36 $00 $21 $20 $01 43 val $F7
+$button 51
+  .showvalue on
+  .mode incval 32
+  .default 0
+  .minmax 0 127
+  .tx $F0 $41 $36 $00 $21 $20 $01 51 val $F7
+$button 52
+  .showvalue on
+  .mode incval 32
+  .default 0
+  .minmax 0 127
+  .tx $F0 $41 $36 $00 $21 $20 $01 52 val $F7
+$store 1
+$end
